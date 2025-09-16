@@ -1,81 +1,74 @@
 
-
-## 📄 `README.md`
-
 ```markdown
-# 📜 Quote Generator
+# 📝 Quote Generator
 
-A simple web app built with **Next.js (React)** that fetches random quotes from the free [Quotable API](https://api.quotable.io).  
-It lets you:
-- Generate random quotes
-- Copy quotes to clipboard
-- Share quotes on Twitter
+A simple **Next.js app** that displays random quotes with options to copy or share them.  
+Deployed with **Docker** on [Render](https://render.com).
 
-The project is **Dockerized** and ready to deploy on **Render free tier**.
+👉 **Live Demo:** [quote-generator](https://quote-generator-6l9c.onrender.com/)
 
 ---
 
-## 🚀 Features
-- Fetch random quotes from an API
-- Display quote + author
-- New Quote button
-- Copy to clipboard
-- Tweet directly
-- Responsive, minimal UI
+## ✨ Features
+- 🎲 Generate random quotes  
+- 📋 Copy quotes to clipboard  
+- 🐦 Share quotes directly to Twitter  
+- 🎨 Styled with custom CSS (no UI framework)  
+- 🐳 Dockerized and deployed on Render (Free Tier)  
+- ⚡ Local fallback quotes when API is unreachable  
 
 ---
 
-## 🛠 Tech Stack
-- **React** (with Next.js pages router)
-- **CSS** for styling
-- **Docker** for containerization
-- **Render** for deployment
+## 🛠️ Tech Stack
+- [Next.js 15](https://nextjs.org/) – React framework  
+- [React 18](https://react.dev/) – UI library  
+- [Docker](https://www.docker.com/) – containerization  
+- [Render](https://render.com/) – deployment platform  
+
+---
+
+## 🚀 Running Locally
+
+Clone the repo:
+
+git clone https://github.com/PapaPureza999/quote-generator.git
+cd quote-generator
+````
+
+Install dependencies:
+
+npm install
+```
+
+Start development server:
+
+npm run dev
+```
+
+Visit: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🐳 Running with Docker
+
+Build image:
+
+```bash
+docker build -t quote-generator .
+```
+
+Run container:
+
+```bash
+docker run -p 3000:10000 -e PORT=10000 quote-generator
+```
+
+Visit: [http://localhost:3000](http://localhost:3000)
 
 
 ---
 
-## 🖥 Run Locally
+## 📜 License
 
-1. Clone this repository:
-   ```bash
-   git clone <your-repo-url>
-   cd quote-generator
+This project is open source and available under the [MIT License](LICENSE).
 
-2. Install dependencies:
-
-   ```bash
-   npm install
-
-3. Start the development server:
-
-   ```bash
-   npm run dev
-
-   App will run at 👉 [http://localhost:3000](http://localhost:3000)
-
-4. Build and run production:
-
-   ```bash
-   npm run build
-   PORT=3000 npm start
-   ```
-
----
-
-## 🐳 Run with Docker
-
-1. Build the image:
-
-   ```bash
-   docker build -t quote-generator .
-   ```
-
-2. Run the container:
-
-   ```bash
-   docker run -p 3000:10000 -e PORT=10000 quote-generator
-   ```
-
-3. Open 👉 [http://localhost:3000](http://localhost:3000)
-
----
